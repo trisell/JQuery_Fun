@@ -3,7 +3,7 @@
    I am content with pusing the HTML alone to the page as needed.
 */
 var header = '<div class="head col-sm-12">'
-  + '<p class="intro">Buy Our Sushi</p>'
+  + "<p class='intro'>Bento's Sushi, Ramen, and Yakitori House.</p>"
   + "<p class='intro2'> It's Awesomesauce!<br><br></p>"
   + '</div>';
 
@@ -24,7 +24,7 @@ var tabs = "<ul class='tabs nav nav-tabs'>"
  + "<div id='tab1'>"
  +   "<div class='container'>"
  +     "<div class='row'>"
- +       "<div class'col-sm-12'><h1 class='tab1'>We believe that sushi is as much about the beauty of food, as it is about the taste.</h1><br></div>"
+ +       "<div class'col-sm-12 center'><h1 class='tab1'>We believe that sushi is as much about the beauty of food, as it is about the taste.</h1><br></div>"
  +       "<div class='col-sm-4'><img class='circle' src='./images/sushi2.jpg'></div>"
  +       "<div class='col-sm-4'><img class='circle' src='./images/sushi3.jpg'></div>"
  +       "<div class='col-sm-4'><img class='circle' src='./images/sushi4.jpg'></div>"
@@ -34,7 +34,7 @@ var tabs = "<ul class='tabs nav nav-tabs'>"
  + "<div id='tab2'>"
  +   "<div class='container'>"
  +     "<div class='row'>"
- +       "<div class'col-sm-12'><h1 class='tab1'>We make Yakitori in the most traditional way possible. Charcol, Fire, and only the finest cuts of meat.</h1><br></div>"
+ +       "<div class'col-sm-12 center'><h1 class='tab2'>We make Yakitori in the most traditional way possible. Charcol, Fire, and only the finest cuts of meat.</h1><br></div>"
  +       "<div class='col-sm-4'><img class='circle' src='./images/yakitori1.jpg'></div>"
  +       "<div class='col-sm-4'><img class='circle' src='./images/yakitori2.jpg'></div>"
  +       "<div class='col-sm-4'><img class='circle' src='./images/yakitori3.jpg'></div>"
@@ -44,10 +44,10 @@ var tabs = "<ul class='tabs nav nav-tabs'>"
  + "<div id='tab3'>"
  +   "<div class='container'>"
  +     "<div class='row'>"
- +       "<div class'col-sm-12'><h1 class='tab1'>We believe that sushi is as much about the beauty of food, as it is about the taste.</h1><br></div>"
- +       "<div class='col-sm-4'><img class='circle' src='./images/sushi2.jpg'></div>"
- +       "<div class='col-sm-4'><img class='circle' src='./images/sushi3.jpg'></div>"
- +       "<div class='col-sm-4'><img class='circle' src='./images/sushi4.jpg'></div>"
+ +       "<div class'col-sm-12 center'><h1 class='tab3'>We strive to provide the most authentic Ramen experience outside of Japan.</h1><br></div>"
+ +       "<div class='col-sm-4'><img class='circle' src='./images/ramen1.jpg'></div>"
+ +       "<div class='col-sm-4'><img class='circle' src='./images/ramen2.jpg'></div>"
+ +       "<div class='col-sm-4'><img class='circle' src='./images/ramen3.jpg'></div>"
  +     "</div>"
  +   "</div>"
  + "</div>"
@@ -64,10 +64,12 @@ $(document).ready(function(){
     // For each set of tabs, we want to keep track of
     // which tab is active and it's associated content
     var $active, $content, $links = $(this).find('a');
-
+    console.log($links);
     // If the location.hash matches one of the links, use that as the active tab.
     // If no match is found, use the first link as the initial active tab.
-    $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+    // This function errored out and would not find the first hash. I ended up having to modify it to only look for the first link.
+    // I have left the original code commented out.
+    $active = $($links[0]);   //($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
     $active.addClass('active');
 
     $content = $($active[0].hash);

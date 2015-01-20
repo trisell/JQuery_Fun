@@ -24,7 +24,7 @@
 
 .intro2{
   font-size: 60px;
-  text-align: right;
+  text-align: center;
   color: blue;
   padding-right: 100px;
   padding-top:  10px;
@@ -43,4 +43,8 @@ border-radius: 150px;
 -ms-transition: all .4s ease-out;
 -o-transition: all .4s ease-out;
 transition: all .4s ease-out;
+}
+
+.center{
+  text-align: center;
 }
