@@ -1,0 +1,46 @@
+.tabs li {
+				list-style:none;
+				display:inline;
+			}
+.head{
+  background-image: url('images/Sushi1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  //margin: 0;
+  background-color: rgb(245,245,245);
+
+
+}
+.intro{
+  font-size: 80px;
+  text-align: right;
+  color: green;
+  padding-right: 200px;
+  padding-top:  30px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.intro2{
+  font-size: 60px;
+  text-align: right;
+  color: blue;
+  padding-right: 100px;
+  padding-top:  10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.circle {
+margin-top: 30px;
+width: 300px;
+height: 300px;
+border-radius: 150px;
+-webkit-border-radius: 150px;
+-moz-border-radius: 150px;
+-webkit-transition: all .4s ease-out;
+-moz-transition: all .4s ease-out;
+-ms-transition: all .4s ease-out;
+-o-transition: all .4s ease-out;
+transition: all .4s ease-out;
+}
